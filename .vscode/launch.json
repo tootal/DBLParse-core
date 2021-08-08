@@ -10,7 +10,8 @@
             "request": "launch",
             "program": "${workspaceFolder}/build/dblpcore",
             "args": [
-                "-a=b",
+                "-d",
+                "https://dblp.org/xml/release/dblp-2021-08-01.xml.gz",
             ],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

@@ -1,1 +1,4 @@
 /build
+/dblp*.xml
+/dblp*.xml.gz
+/dblp*.xml.gz.md5

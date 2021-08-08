@@ -13,6 +13,9 @@ CPMAddPackage(
     "CXXOPTS_BUILD_TESTS Off"
 )
 
+find_library(LIBCURL curl)
+message(STATUS "Library curl: ${LIBCURL}")
+
 add_executable(${PROJECT_NAME})
 
 target_sources(${PROJECT_NAME}
@@ -21,7 +24,8 @@ target_sources(${PROJECT_NAME}
 
 target_link_libraries(${PROJECT_NAME}
     PRIVATE
-        cxxopts)
+        cxxopts
+        ${LIBCURL})
 
 target_compile_features(${PROJECT_NAME}
     PRIVATE 
