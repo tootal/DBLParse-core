@@ -1,13 +1,14 @@
 #include <iostream>
 #include <cxxopts.hpp>
-#include <curl/curl.h>
-#include <zlib.h>
+// #include <curl/curl.h>
+// #include <zlib.h>
 
 static size_t write_data(void *ptr, size_t size, size_t nmemb, void *stream) {
     return fwrite(ptr, size, nmemb, (FILE*)stream);
 }
 
 void dblp_download(const std::string &url) {
+    /*
     CURL *curl_handle;
     static const char *pagefilename = "dblp.xml.gz";
     FILE *pagefile;
@@ -25,9 +26,11 @@ void dblp_download(const std::string &url) {
     }
     curl_easy_cleanup(curl_handle);
     curl_global_cleanup();
+    */
 }
 
 int dblp_inflate(const std::string &fileName) {
+    /*
     int ret;
     unsigned have;
     unsigned chunk_index = 0;
@@ -93,6 +96,8 @@ int dblp_inflate(const std::string &fileName) {
 
     (void)inflateEnd(&strm);
     return ret == Z_STREAM_END ? Z_OK : Z_DATA_ERROR;
+    */
+   return 0;
 }
 
 int main(int argc, char *argv[]) {
